@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":1,
-    "selecteID":6,
+    "selectedBox":6,
+    "selecteID":5,
     "props":{"width":800,"sceneColor":"#ffffff","height":600},
     "nodeParent":-1,
     "label":"View",
@@ -32,14 +32,16 @@
             "props":{"y":196,"x":154},
             "nodeParent":1,
             "label":"Box",
+            "isOpen":true,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":6,
             "child":[
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"x":3,"var":"normal","skin":"comp/mouse_normal_1.png"},
+                    "props":{"y":-1,"x":8,"var":"normal","skin":"comp/mouse_normal_1.png"},
                     "nodeParent":6,
                     "label":"Image(normal)",
                     "isDirectory":false,
@@ -47,13 +49,15 @@
                     "hasChild":false,
                     "compId":3,
                     "child":[
-                        ]
+                        ],
+                    "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":9,"x":2,"skin":"comp/mouse_hit_1.png"},
+                    "props":{"y":14,"x":8,"var":"hit","skin":"comp/mouse_hit_1.png"},
                     "nodeParent":6,
-                    "label":"Image",
+                    "label":"Image(hit)",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
@@ -63,10 +67,11 @@
                     "$HIDDEN":false
                 },
                 {
+                    "x":30,
                     "type":"Image",
-                    "props":{"y":87,"var":"hit","skin":"comp/mask-01.png"},
+                    "props":{"y":83,"x":5,"skin":"comp/mask-01.png"},
                     "nodeParent":6,
-                    "label":"Image(hit)",
+                    "label":"Image",
                     "isDirectory":false,
                     "isAniNode":true,
                     "hasChild":false,
