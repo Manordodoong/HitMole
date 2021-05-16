@@ -46,7 +46,14 @@ var Mole = (function () {
         } 
     };
     _proto.hit = function () {
-
+        if(this.isShow && !this.isHit) {
+            this.isHit =true;
+            this.isShow = false;
+            Laya.timer.clear(this, this.hide);
+            this.normalState.visible = false;
+            this.hitState.visible =true;
+            Laya.timer.once(500, this, this.reset);
+        }
     };
     return Mole;
 })();
