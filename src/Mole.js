@@ -15,6 +15,9 @@ var Mole = (function () {
         this.isHit = false;
         this.normalState.visible = false;
         this.hitState.visible = false;
+        this.type = Math.random() <= 0.5 ? 1 : 2;
+        this.normalState.skin = "comp/mouse_normal_" + this.type + ".png";
+        this.hitState.skin = "comp/mouse_hit_" + this.type + ".png";
     };
     _proto.show = function () {
         console.log('show Y: ', this.downY, " -> ", this.upY);
