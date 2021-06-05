@@ -8,9 +8,12 @@ var Game = (function(_super){
         this.hitCallBack = Laya.Handler.create(this, this.setScore, null, false);
         for (var index = 0 ; index < this.moleNum; index++) {
             this.box = this.getChildByName("item" + index);
-            this.mole = new Mole(this.box.getChildByName("normal"), this.box.getChildByName("hit"), 21 , this.hitCallBack);
+            this.mole = new Mole(this.box.getChildByName("normal"), this.box.getChildByName("hit"), 21 , this.hitCallBack, this.box.getChildByName("scoreImg"));
             this.moles.push(this.mole);
         }
+        this.hammer = new Hammer();
+        this.addChild(this.hammer);
+        this.hammer.start();
         Laya.timer.loop(1000, this, this.isShow)
     }
     Laya.class(Game, "Game", _super);
